@@ -1,0 +1,45 @@
+{
+  "name": "vl-ui-properties",
+  "version": "1.0.1",
+  "description": "De vl-properties webcomponent toont een lijst van kenmerken van een onderwerp, bijvoorbeeld: voor een persoon. Deze component wordt meestal gebruikt om informatie te tonen dat ingevuld werd in een formulier.",
+  "main": "vl-properties.js",
+  "author": "DIDM",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milieuinfo/webcomponent-vl-ui-properties.git"
+  },
+  "homepage": "https://github.com/milieuinfo/webcomponent-vl-ui-properties#readme",
+  "publishConfig": {
+    "registry": "http://artifactory-pr-build.lb.cumuli.be:8081/artifactory/api/npm/acd-npm/"
+  },
+  "scripts": {
+    "prepare": "npm run prepare:util",
+    "prepare:util": "npm explore vl-ui-util -- npm run util",
+    "test": "wct -l chrome,firefox --npm",
+    "release": "np",
+    "release:prepare": "npm run release:prepare:build && npm run release:prepare:imports && npm run release:prepare:css && npm run release:prepare:commit",
+    "release:prepare:build": "uglifyjs --compress --mangle --output vl-properties.js -- *.src.js",
+    "release:prepare:imports": "replace '/node_modules/vl-ui-core/vl-core.src.js' '/node_modules/vl-ui-core/vl-core.js' vl-properties.js",
+    "release:prepare:css": "replace '\\.\\./style.css' '/node_modules/vl-ui-properties/style.css' vl-properties.js",
+    "release:prepare:commit": "git add -f vl-properties.js && git commit --amend --no-edit && git pull",
+    "release:testless": "np --yolo",
+    "demo": "http-server"
+  },
+  "dependencies": {
+    "vl-ui-core": "1.3.1"
+  },
+  "peerDependencies": {
+    "vl-ui-core": "1.3.0"
+  },
+  "devDependencies": {
+    "@govflanders/vl-ui-properties": "3.7.2",
+    "wct-browser-legacy": "1.0.2",
+    "web-component-tester": "6.9.2",
+    "replace": "1.0.0",
+    "np": "3.0.4",
+    "uglify-js-es6": "2.8.9",
+    "http-server": "0.11.1",
+    "vl-ui-util": "1.0.0"
+  }
+}
