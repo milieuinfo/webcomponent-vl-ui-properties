@@ -27,6 +27,8 @@ export class VlProperties extends VlElement(HTMLElement) {
  * @classdesc De properties kolom webcomponent wordt gebruikt om lijsten van kenmerken van een onderwerp te verdelen in verschillende kolommen. <a href="demo/vl-properties.html">Demo</a>.
  * 
  * @extends VlElement
+ *
+ * @property {boolean} full - Attribuut wordt gebruikt om de kolom de volledige breedte te laten innemen.
  */
 export class VlPropertiesColumn extends NativeVlElement(HTMLDivElement) {
     static get _observedClassAttributes() {
