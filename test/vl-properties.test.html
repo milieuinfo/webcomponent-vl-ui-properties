@@ -7,12 +7,29 @@
   <script src="../../web-component-tester/browser.js"></script>
 
   <script type="module" src="../vl-properties.src.js"></script>
+  <script type="module" src="../node_modules/vl-ui-titles/vl-titles.js"></script>
 </head>
 
 <body>
   <test-fixture id="vl-properties-fixture">
     <template>
       <vl-properties></vl-properties>
+    </template>
+  </test-fixture>
+
+  <test-fixture id="vl-properties-title-fixture">
+    <template>
+      <vl-properties>
+        <h1></h1>
+      </vl-properties>
+    </template>
+  </test-fixture>
+
+  <test-fixture id="vl-properties-vl-title-fixture">
+    <template>
+      <vl-properties>
+        <h1 is="vl-h1"></h1>
+      </vl-properties>
     </template>
   </test-fixture>
 
@@ -25,12 +42,6 @@
   <test-fixture id="vl-properties-list-fixture">
     <template>
       <dl is="vl-properties-list"></dl>
-    </template>
-  </test-fixture>
-
-  <test-fixture id="vl-properties-title-fixture">
-    <template>
-      <h1 is="vl-properties-title"></h1>
     </template>
   </test-fixture>
 
@@ -85,10 +96,14 @@
       });
     });
 
-    suite('vl-properties-title', () => {
+    suite('vl-properties title', () => {
       test('heeft de vl-properties__title class', () => {
         const element = fixture('vl-properties-title-fixture');
-        assert.isTrue(element.classList.contains('vl-properties__title'));
+        assert.isTrue(element.querySelector("h1").classList.contains('vl-properties__title'));
+
+        const element1 = fixture('vl-properties-vl-title-fixture');
+        assert.isTrue(element1.querySelector("h1").classList.contains('vl-title'));
+        assert.isTrue(element1.querySelector("h1").classList.contains('vl-properties__title'));
       });
     });
 
