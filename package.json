@@ -1,6 +1,6 @@
 {
   "name": "vl-ui-properties",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "De vl-properties webcomponent toont een lijst van kenmerken van een onderwerp, bijvoorbeeld: voor een persoon. Deze component wordt meestal gebruikt om informatie te tonen dat ingevuld werd in een formulier.",
   "main": "vl-properties.js",
   "author": "DIDM",
