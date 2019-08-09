@@ -24,10 +24,10 @@
     "release:prepare:css": "replace '\\.\\./style.css' '/node_modules/vl-ui-properties/style.css' vl-properties.js",
     "release:prepare:commit": "git add -f vl-properties.js && git commit --amend --no-edit && git pull",
     "release:testless": "np --yolo",
-    "demo": "http-server"
+    "demo": "http-server -9085"
   },
   "dependencies": {
-    "vl-ui-core": "1.4.3"
+    "vl-ui-core": "github:milieuinfo/webcomponent-vl-ui-core#UIG-150"
   },
   "peerDependencies": {
     "vl-ui-core": "^1.4.2"
