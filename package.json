@@ -1,6 +1,6 @@
 {
   "name": "vl-ui-properties",
-  "version": "2.0.3",
+  "version": "2.0.8",
   "description": "De vl-properties webcomponent toont een lijst van kenmerken van een onderwerp, bijvoorbeeld: voor een persoon. Deze component wordt meestal gebruikt om informatie te tonen dat ingevuld werd in een formulier.",
   "main": "vl-properties.js",
   "author": "DIDM",
@@ -14,7 +14,7 @@
     "registry": "http://artifactory-pr-build.lb.cumuli.be:8081/artifactory/api/npm/acd-npm/"
   },
   "scripts": {
-    "prepare": "npm run prepare:util",
+    "prepare": "npm update --dev vl-ui-util && npm run prepare:util",
     "prepare:util": "npm explore vl-ui-util -- npm run util",
     "test": "wct -l chrome,firefox --npm",
     "release": "np",
@@ -27,7 +27,7 @@
     "demo": "http-server"
   },
   "dependencies": {
-    "vl-ui-core": "1.4.3"
+    "vl-ui-core": "1.4.4"
   },
   "peerDependencies": {
     "vl-ui-core": "^1.4.2"
@@ -38,8 +38,8 @@
     "np": "3.1.0",
     "replace": "1.1.0",
     "uglify-js-es6": "2.8.9",
-    "vl-ui-titles": "1.0.8",
-    "vl-ui-util": "^1.2.3",
+    "vl-ui-titles": "1.0.9",
+    "vl-ui-util": "^1.2.22",
     "wct-browser-legacy": "1.0.2",
     "web-component-tester": "6.9.2"
   }
