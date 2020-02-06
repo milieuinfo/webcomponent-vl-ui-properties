@@ -2,6 +2,8 @@
   "name": "vl-ui-properties",
   "version": "2.0.10",
   "description": "De vl-properties webcomponent toont een lijst van kenmerken van een onderwerp, bijvoorbeeld: voor een persoon. Deze component wordt meestal gebruikt om informatie te tonen dat ingevuld werd in een formulier.",
+  "author": "DIDM",
+  "license": "MIT",
   "main": "./src/index.js",
   "exports": {
     "require": "./index.js",
@@ -9,13 +11,14 @@
     "node": "./index.js",
     "default": "./index.js"
   },
-  "author": "DIDM",
-  "license": "MIT",
+  "homepage": "https://github.com/milieuinfo/webcomponent-vl-ui-properties#readme",
+  "bugs": {
+    "url": "https://github.com/milieuinfo/webcomponent-vl-ui-properties/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/milieuinfo/webcomponent-vl-ui-properties.git"
   },
-  "homepage": "https://github.com/milieuinfo/webcomponent-vl-ui-properties#readme",
   "publishConfig": {
     "registry": "http://artifactory-pr-build.lb.cumuli.be:8081/artifactory/api/npm/acd-npm/"
   },
@@ -63,7 +66,7 @@
   },
   "devDependencies": {
     "@govflanders/vl-ui-properties": "^3.9.1",
-    "vl-ui-titles": "^1.0.13",
+    "vl-ui-titles": "^2.0.0",
     "vl-ui-util": "^4.0.1"
   }
 }
