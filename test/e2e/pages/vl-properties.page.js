@@ -1,6 +1,5 @@
 const VlProperties = require('../components/vl-properties');
-const { Page } = require('vl-ui-core');
-const { Config } = require('vl-ui-core');
+const { Page, Config } = require('vl-ui-core').Test;
 
 class VlPropertiesPage extends Page {
     async _getProperties(selector) {

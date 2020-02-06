@@ -1,5 +1,5 @@
 
-const { assert, driver } = require('vl-ui-core').Test;
+const { assert, driver } = require('vl-ui-core').Test.Config;
 const VlPropertiesPage = require('./pages/vl-properties.page');
 
 describe('vl-properties', async () => {
@@ -8,5 +8,9 @@ describe('vl-properties', async () => {
     before(() => {
         return vlPropertiesPage.load();
     });
+
+    after(async () => {
+        return driver.quit();
+    })
 
 });
