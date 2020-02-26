@@ -7,7 +7,7 @@ class VlPropertiesPage extends Page {
     }
 
     async load() {
-        await super.load(Config.baseUrl + '/demo/vl-properties.html');
+        await super.load(`${Config.baseUrl}/demo/vl-properties.html`);
     }
 }
 
