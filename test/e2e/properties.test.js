@@ -14,8 +14,11 @@ describe('vl-properties', async () => {
         const propertiesChildren = await propertiesElement.getSlotElements();
 
         assert.lengthOf(propertiesChildren, 4);
-        const fullSizeColumn = await new VlPropertiesColumn(driver, propertiesChildren[propertiesChildren.length - 1]);
+        const fullSizeColumn = await new VlPropertiesColumn(driver, propertiesChildren.pop());
         await assert.eventually.isTrue(fullSizeColumn.isFullSize());
+
+        const nonFullSizeColumn = await new VlPropertiesColumn(driver, propertiesChildren.pop());
+        await assert.eventually.isFalse(nonFullSizeColumn.isFullSize());
 
         const propertiesList = await fullSizeColumn.getPropertiesList();
         const nationaliteitProperty = await propertiesList.getPropertyByTermText('Nationaliteit');
