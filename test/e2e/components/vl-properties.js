@@ -19,11 +19,11 @@ class VlPropertiesColumn extends VlElement {
 }
 
 class VlPropertiesList extends VlElement {
-    async getProperty(term) {
+    async getPropertyByTermText(termText) {
         const properties = await this.getProperties();
         for (let i = 0; i < properties.length; i++) {
             const property = properties[i];
-            if (property.term && await property.term.getText() === term) {
+            if (property.term && await property.term.getText() === termText) {
                 return property;
             }
         }
