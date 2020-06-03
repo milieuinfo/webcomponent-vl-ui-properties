@@ -61,7 +61,7 @@
       test('bevat een div element met daarin de slot content', () => {
         const element = fixture('vl-properties-fixture');
         const content = document.createElement('span');
-        content.innerText = "Dit is de slot content";
+        content.innerText = 'Dit is de slot content';
         element.appendChild(content);
         should.exist(element.shadowRoot.querySelector('.vl-properties'));
         assert.equal(element.shadowRoot.querySelector('.vl-properties slot').assignedElements()[0], content);
@@ -96,18 +96,18 @@
     suite('vl-properties title', () => {
       test('heeft de vl-properties__title class', () => {
         const element1 = fixture('vl-properties-vl-title-fixture');
-        assert.isTrue(element1.querySelector("h1").classList.contains('vl-title'));
-        assert.isTrue(element1.querySelector("h1").classList.contains('vl-properties__title'));
-        assert.isTrue(element1.querySelector("h2").classList.contains('vl-title'));
-        assert.isTrue(element1.querySelector("h2").classList.contains('vl-properties__title'));
-        assert.isTrue(element1.querySelector("h3").classList.contains('vl-title'));
-        assert.isTrue(element1.querySelector("h3").classList.contains('vl-properties__title'));
-        assert.isTrue(element1.querySelector("h4").classList.contains('vl-title'));
-        assert.isTrue(element1.querySelector("h4").classList.contains('vl-properties__title'));
-        assert.isTrue(element1.querySelector("h5").classList.contains('vl-title'));
-        assert.isTrue(element1.querySelector("h5").classList.contains('vl-properties__title'));
-        assert.isTrue(element1.querySelector("h6").classList.contains('vl-title'));
-        assert.isTrue(element1.querySelector("h6").classList.contains('vl-properties__title'));
+        assert.isTrue(element1.querySelector('h1').classList.contains('vl-title'));
+        assert.isTrue(element1.querySelector('h1').classList.contains('vl-properties__title'));
+        assert.isTrue(element1.querySelector('h2').classList.contains('vl-title'));
+        assert.isTrue(element1.querySelector('h2').classList.contains('vl-properties__title'));
+        assert.isTrue(element1.querySelector('h3').classList.contains('vl-title'));
+        assert.isTrue(element1.querySelector('h3').classList.contains('vl-properties__title'));
+        assert.isTrue(element1.querySelector('h4').classList.contains('vl-title'));
+        assert.isTrue(element1.querySelector('h4').classList.contains('vl-properties__title'));
+        assert.isTrue(element1.querySelector('h5').classList.contains('vl-title'));
+        assert.isTrue(element1.querySelector('h5').classList.contains('vl-properties__title'));
+        assert.isTrue(element1.querySelector('h6').classList.contains('vl-title'));
+        assert.isTrue(element1.querySelector('h6').classList.contains('vl-properties__title'));
       });
     });
 
