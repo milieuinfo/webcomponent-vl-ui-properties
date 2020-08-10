@@ -78,9 +78,9 @@
         const button = fixture('vl-properties-column-fixture');
         ['full'].forEach((attribuut) => {
           assert.isFalse(button.classList.contains('vl-properties__column--' + attribuut));
-          button.setAttribute(attribuut, '');
+          button.setAttribute(`data-vl-${attribuut}`, '');
           assert.isTrue(button.classList.contains('vl-properties__column--' + attribuut));
-          button.removeAttribute(attribuut);
+          button.removeAttribute(`data-vl-${attribuut}`);
           assert.isFalse(button.classList.contains('vl-properties__column--' + attribuut));
         });
       });
