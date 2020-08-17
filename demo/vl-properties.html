@@ -4,19 +4,19 @@
 <head>
     <title>vl-properties voorbeeld</title>
     <script type="module" src="/node_modules/vl-ui-demo/dist/vl-demo-all.js"></script>
+    <script type="module" src="/node_modules/vl-ui-body/dist/vl-body.js"></script>
     
     <script type="module" src="/src/vl-properties.js"></script>
-    <script type="module" src="/node_modules/vl-ui-titles/dist/vl-titles.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="/node_modules/vl-ui-titles/dist/style.css" />
     <link rel="stylesheet" type="text/css" href="/src/style.css" />
+    <link rel="stylesheet" type="text/css" href="/node_modules/vl-ui-body/dist/style.css" />
 </head>
 
-<body>
+<body is="vl-body">
     <vl-demo-page data-vl-webcomponent="vl-properties" data-vl-link="https://overheid.vlaanderen.be/webuniversum/v3/documentation/components/vl-ui-properties">
         <vl-demo data-vl-title="Properties">
             <vl-properties>
-                <h1 is="vl-h1">Gegevens</h1>
+                <h1>Gegevens</h1>
                 <dl is="vl-properties-list">
                     <dt is="vl-property-term">Voornaam</dt>
                     <dd is="vl-property-value">Koen</dd>
@@ -30,7 +30,7 @@
 
         <vl-demo data-vl-title="Properties met kolommen">
             <vl-properties>
-                <h1 is="vl-h1">Gegevens</h1>
+                <h1>Gegevens</h1>
                 <div is="vl-properties-column">
                     <dl is="vl-properties-list">
                         <dt is="vl-property-term">Voornaam</dt>
