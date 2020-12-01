@@ -1,15 +1,18 @@
-const {assert, driver, By} = require('vl-ui-core').Test.Setup;
+const {assert, getDriver, By} = require('vl-ui-core').Test.Setup;
 const VlPropertiesPage = require('./pages/vl-properties.page');
 const {VlPropertiesColumn} = require('./components/vl-properties');
 
 describe('vl-properties', async () => {
-  const vlPropertiesPage = new VlPropertiesPage(driver);
+  let driver;
+  let vlPropertiesPage;
 
   before(async () => {
+    driver = getDriver();
+    vlPropertiesPage = new VlPropertiesPage(driver);
     return vlPropertiesPage.load();
   });
 
-  it('Als gebruiker kan ik properties zien in een full-size kolom', async () => {
+  it('als gebruiker kan ik properties zien in een full-size kolom', async () => {
     const propertiesElement = await vlPropertiesPage.getProperties();
     const propertiesChildren = await propertiesElement.getSlotElements();
 
