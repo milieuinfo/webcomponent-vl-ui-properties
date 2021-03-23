@@ -12,6 +12,10 @@ describe('vl-properties', async () => {
     return vlPropertiesPage.load();
   });
 
+  it('WCAG', async () => {
+    await assert.eventually.isFalse(vlPropertiesPage.hasWcagIssues());
+  });
+
   it('als gebruiker kan ik properties zien in een full-size kolom', async () => {
     const propertiesElement = await vlPropertiesPage.getProperties();
     const propertiesChildren = await propertiesElement.getSlotElements();
