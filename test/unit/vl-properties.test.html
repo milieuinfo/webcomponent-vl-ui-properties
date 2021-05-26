@@ -66,6 +66,17 @@
         should.exist(element.shadowRoot.querySelector('.vl-properties'));
         assert.equal(element.shadowRoot.querySelector('.vl-properties slot').assignedElements()[0], content);
       });
+
+      test('krijgt de juiste class wanneer het properties het full-width attribuut bevat', () => {
+        const element = fixture('vl-properties-fixture');
+        const attribute = 'data-vl-full-width';
+        const clazz = 'vl-properties__column--full-width';
+        assert.isFalse(element.classList.contains(clazz));
+        element.setAttribute(attribute, '');
+        assert.isTrue(element.classList.contains(clazz));
+        element.removeAttribute(attribute);
+        assert.isFalse(element.classList.contains(clazz));
+      });
     });
 
     suite('vl-properties-column', () => {
